@@ -2,7 +2,6 @@ import create from 'zustand';
 import {persist} from "zustand/middleware";
 import {BASE_URL} from "../utils";
 import axios from "axios";
-import {exec} from "child_process";
 
 const authStore = (set: any) => ({
     userProfile: null,

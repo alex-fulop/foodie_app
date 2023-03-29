@@ -19,6 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         const userVideos = await client.fetch(userVideosQuery);
         const userLikedVideos = await client.fetch(userLikedVideosQuery);
 
+        // descrierea retetei sincronizata cu videoclipul
         res.status(200).json({
             user: user[0],
             userVideos,
