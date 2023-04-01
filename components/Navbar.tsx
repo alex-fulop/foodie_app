@@ -2,13 +2,12 @@ import Link from "next/link";
 import React, {useState} from "react";
 import Image from "next/image";
 import {GoogleLogin, googleLogout} from "@react-oauth/google";
-
-import Logo from "../utils/tiktik-logo.png";
 import {createOrGetUser} from "../utils";
 
 import useAuthStore from "../store/authStore";
 import {AiOutlineLogout, BiSearch, IoMdAdd} from "react-icons/all";
 import {useRouter} from "next/router";
+import Logo from "../utils/foodie-logo.png";
 
 const Navbar = () => {
     const {userProfile, addUser, removeUser} = useAuthStore();
@@ -59,7 +58,8 @@ const Navbar = () => {
             {userProfile ? (
                 <div className="flex gap-5 md:gap-10">
                     <Link href='/upload'>
-                        <button className="border-2 px-2 md:px-4 text-md font-semibold flex items-center gap-2 rounded-full">
+                        <button
+                            className="border-2 px-2 md:px-4 text-md font-semibold flex items-center gap-2 rounded-full">
                             <IoMdAdd className="text-xl"/> {` `}
                             <span className="hidden md:block">Upload</span>
                         </button>
